@@ -60,8 +60,8 @@ class Mockery
      */
     private static $_filesToCleanUp = [];
 
-    /**
-     * Defines the global helper functions
+    /*
+     * 定义全局帮助函数
      *
      * @return void
      */
@@ -70,8 +70,8 @@ class Mockery
         require_once __DIR__.'/helpers.php';
     }
 
-    /**
-     * Static shortcut to \Mockery\Container::mock().
+    /*
+     * \Mockery\Container::mock() 的快捷语句
      *
      * @param array $args
      *
@@ -126,8 +126,8 @@ class Mockery
         return call_user_func_array(array(self::getContainer(), 'mock'), $args);
     }
 
-    /**
-     * Static shortcut to \Mockery\Container::self().
+    /*
+     * \Mockery\Container::self() 的快捷语句
      *
      * @throws LogicException
      *
@@ -176,9 +176,8 @@ class Mockery
         return self::$_container->fetchMock($name);
     }
 
-    /**
-     * Lazy loader and getter for
-     * the container property.
+    /*
+     * 获取 container 对象
      *
      * @return Mockery\Container
      */
@@ -191,8 +190,8 @@ class Mockery
         return self::$_container;
     }
 
-    /**
-     * Setter for the $_generator static propery.
+    /*
+     * 设置 generator 对象
      *
      * @param \Mockery\Generator\Generator $generator
      */
@@ -201,9 +200,8 @@ class Mockery
         self::$_generator = $generator;
     }
 
-    /**
-     * Lazy loader method and getter for
-     * the generator property.
+    /*
+     * 获取 generator 对象
      *
      * @return Generator
      */
@@ -216,9 +214,8 @@ class Mockery
         return self::$_generator;
     }
 
-    /**
-     * Creates and returns a default generator
-     * used inside this class.
+    /*
+     * 获取 CachingGenerator 对象
      *
      * @return CachingGenerator
      */
@@ -227,8 +224,8 @@ class Mockery
         return new CachingGenerator(StringManipulationGenerator::withDefaultPasses());
     }
 
-    /**
-     * Setter for the $_loader static property.
+    /*
+     * 设置 Loader 对象
      *
      * @param Loader $loader
      */
@@ -237,9 +234,8 @@ class Mockery
         self::$_loader = $loader;
     }
 
-    /**
-     * Lazy loader method and getter for
-     * the $_loader property.
+    /*
+     * 获取 Loader 对象
      *
      * @return Loader
      */
@@ -252,8 +248,8 @@ class Mockery
         return self::$_loader;
     }
 
-    /**
-     * Gets an EvalLoader to be used as default.
+    /*
+     * 获取 EvalLoader 对象
      *
      * @return EvalLoader
      */
@@ -262,8 +258,8 @@ class Mockery
         return new EvalLoader();
     }
 
-    /**
-     * Set the container.
+    /*
+     * 设置 container 对象
      *
      * @param \Mockery\Container $container
      *
@@ -274,8 +270,8 @@ class Mockery
         return self::$_container = $container;
     }
 
-    /**
-     * Reset the container to null.
+    /*
+     * 重置 container 对象为空
      *
      * @return void
      */
@@ -439,9 +435,8 @@ class Mockery
         return new \Mockery\Matcher\Pattern($expected);
     }
 
-    /**
-     * Lazy loader and Getter for the global
-     * configuration container.
+    /*
+     * 获取 \Mockery\Configuration 对象
      *
      * @return \Mockery\Configuration
      */

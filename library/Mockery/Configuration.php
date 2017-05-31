@@ -47,8 +47,8 @@ class Configuration
      */
     protected $_internalClassParamMap = array();
 
-    /**
-     * Set boolean to allow/prevent mocking of non-existent methods
+    /*
+     * 设置是否允许模拟不存在的方法
      *
      * @param bool
      */
@@ -57,8 +57,8 @@ class Configuration
         $this->_allowMockingNonExistentMethod = (bool) $flag;
     }
 
-    /**
-     * Return flag indicating whether mocking non-existent methods allowed
+    /*
+     * 获取是否允许模拟不存在的方法
      *
      * @return bool
      */
